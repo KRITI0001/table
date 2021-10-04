@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>table</title>
+    <style>
+      body {
+   background-image: url("https://images.unsplash.com/photo-1570485071395-29b575ea3b4e?ixid=MnwxMjA3fDB8MHxzZWFyY2h8MXx8Y29tcHV0ZXIlMjBkZXNrfGVufDB8fDB8fA%3D%3D&ixlib=rb-1.2.1&w=1000&q=80");
+   background-color: #cccccc;
+  }
+         
+      table, th, td {
+        border: 2px solid black;
+        border-collapse: collapse;
+        font-size: 20px;
+        
+        
+      }
+      th, td {
+        padding: 5px;
+  
+      }
+      th {
+        text-align: left;
+        color:rgb(247, 246, 245);background-color: rgb(55, 182, 255);
+      }
+      td
+      {
+          color:black;
+          background-color :rgb(55, 182, 255);
+      }
+      h1
+      {
+         color:blue; 
+         font-size: 30px;
+         text-decoration:  5px underline darkblue;
+         text-align: center;
+         
+      }
+      #myTable
+      {
+          margin-left: auto;
+    margin-right: auto;   
+      }
+
+      .button1 {
+    text-align: center;
+    
+}
+
+.button {
+    position: absolute;
+    top: 50%;
+    background-color: #4CAF50;
+
+}
+
+      
+      </style>
+    </head>
+    <body>
+    
+   <h1>Table</h1>
+    
+    <table id="myTable">
+      <tr>
+        <td>Row1 cell1</td>
+        <td>Row1 cell2</td>
+      </tr>
+      <tr>
+        <td>Row2 cell1</td>
+        <td>Row2 cell2</td>
+      </tr>
+      <tr>
+        <td>Row3 cell1</td>
+        <td>Row3 cell2</td>
+      </tr>
+    </table>
+    <br>
+    <div class="button1">
+    <button type="button " onclick="myFunction()"style="background-color :green;font-size:25px;">Submit</button>
+    <button style="background-color:red;color: white;font-size: 25px;margin-left: 20px;" onclick="myDeleteFunction()">Delete row</button>
+    </div>
+    <script>
+    function myFunction() {
+      var table = document.getElementById("myTable");
+      var row = table.insertRow(-1);
+      var cell1 = row.insertCell(-1);
+      var cell2 = row.insertCell(1);
+      cell1.innerHTML = "NEW CELL1";
+      cell2.innerHTML = "NEW CELL2";
+    }
+    function myDeleteFunction() {
+  document.getElementById("myTable").deleteRow(-1);
+}
+    </script>
+    
+</html>
